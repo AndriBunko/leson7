@@ -36,7 +36,6 @@ public class Names {
         return Collections.min(names);
     }
 
-
     @Override
     public String toString() {
         return String.valueOf(names);
