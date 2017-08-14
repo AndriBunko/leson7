@@ -36,6 +36,10 @@ public class Names {
         return Collections.min(names);
     }
 
+    public List<String> getNames() {
+        return names;
+    }
+
     @Override
     public String toString() {
         return String.valueOf(names);

@@ -4,6 +4,7 @@ import com.abunko.namesComparing.comparators.*;
 
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 /**
  * Created by Andrew on 26.07.2017.
@@ -19,19 +20,19 @@ public class Runner {
 
         System.out.println(names);
 
-        names.sorting(new AlphabetComparator());
-        System.out.println(names);
+        System.out.println(names.sorting(new AlphabetComparator()));
+        System.out.println(names.sorting(ComparatorUtil.alphabetComparator()));
 
-        names.reversSorting(new AlphabetComparator());
-        System.out.println(names);
+        System.out.println(names.reversSorting(new AlphabetComparator()));
+        System.out.println(names.reversSorting(ComparatorUtil.alphabetComparator()));
 
         System.out.println(names.minName());
 
-        names.sorting(new StringLengthComparator());
-        System.out.println(names);
+        System.out.println(names.sorting(new StringLengthComparator()));
+        System.out.println(names.sorting(ComparatorUtil.lengthComparator()));
 
-        names.sorting(new StringLengthAlphabetComparator());
-        System.out.println(names);
+        System.out.println(names.sorting(new StringLengthAlphabetComparator()));
+        System.out.println(names.sorting(ComparatorUtil.lengthAlphabetComparator()));
 
         System.out.println(names.reversSorting(new StringLengthAlphabetComparator()));
 
